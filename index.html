@@ -6,17 +6,17 @@
 <meta name="robots" content="noindex, nofollow">
 <title>NovaMinds Education — Seed Passion, Inspire Mastery · Dubai</title>
 <meta name="description" content="NovaMinds Education brings world-class learning brands — Story Time Chess and Julia Gabriel — to families in Dubai and the UAE. An education where curiosity is celebrated and individuality is honoured.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b1630'/%3E%3Cpath d='M12 3c.6 4.4 2.9 6.9 8 8-5.1 1.1-7.4 3.6-8 8-.6-4.4-2.9-6.9-8-8 5.1-1.1 7.4-3.6 8-8Z' fill='%23f0a83a'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b2540'/%3E%3Cpath transform='translate(3 3) scale(.75)' d='M12%200%2013.3%208.86%2017.8%206.2%2015.14%2010.7%2024%2012%2015.14%2013.3%2017.8%2017.8%2013.3%2015.14%2012%2024%2010.7%2015.14%206.2%2017.8%208.86%2013.3%200%2012%208.86%2010.7%206.2%206.2%2010.7%208.86Z' fill='%23f99b00'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0b1630; --ink-2:#111f40; --ink-3:#18295200; --navy-line:rgba(170,190,235,.14);
+  --ink:#0b2540; --ink-2:#112f4f; --navy-line:rgba(170,190,235,.14);
   --paper:#f7f3ec; --paper-2:#efe9de; --paper-3:#e6dece; --white:#fffdf9;
-  --text:#14203b; --text-2:#46506a; --text-3:#7a8197;
+  --text:#0e2640; --text-2:#46506a; --text-3:#7a8197;
   --on-ink:#eef1f8; --on-ink-2:#aeb7cc; --on-ink-3:#7d88a3;
-  --nova:#f0a83a; --nova-hi:#ffd28a; --nova-lo:#c47f17;
+  --nova:#f99b00; --nova-hi:#ffc65c; --nova-lo:#c27500;
   --sky:#8fb3ff; --teal:#3c8f8a;
   --line:rgba(20,32,59,.12); --line-2:rgba(20,32,59,.22);
   --stc:#5b3c9e; --stc-2:#2a8fd0; --stc-gold:#f5c22b;
@@ -74,11 +74,12 @@ h2 em,h1 em,h3 em{font-style:italic;font-weight:300;color:var(--nova-lo)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
 .nav.solid{background:rgba(247,243,236,.86);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-color:var(--line);color:var(--text)}
 .nav.hide{transform:translateY(-100%)}
-.brand{display:flex;align-items:center;gap:11px;font-family:var(--sans);font-weight:700;font-size:1.12rem;letter-spacing:.02em}
-.brand svg{width:30px;height:30px;flex:none}
-.brand .m{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.22rem;letter-spacing:-.01em;margin-left:-2px}
-.brand .star-core{transform-origin:center;animation:twinkle 4s ease-in-out infinite}
-@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.86) rotate(45deg)}}
+.brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;line-height:1}
+.wm{font-family:"Poppins",var(--sans);font-weight:600;font-size:1.55rem;letter-spacing:-.015em;line-height:1;white-space:nowrap;padding-top:.32em}
+.wm-i{position:relative;display:inline-block}
+.wm-star{position:absolute;left:50%;bottom:.6em;width:.95em;height:.95em;translate:-38% 0;color:var(--nova);animation:twinkle 5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.82) rotate(22.5deg)}}
+.brand .tag{font:500 .8rem/1.2 var(--sans);letter-spacing:.01em;opacity:.8}
 .nav-links{display:flex;gap:34px;font-size:.88rem;font-weight:500}
 .nav-links a{position:relative;opacity:.82;transition:opacity .3s}
 .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--nova);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out)}
@@ -99,15 +100,15 @@ body.menu-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg)}
 body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)}
 
 /* ---------- hero ---------- */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:130px 0 70px;background:radial-gradient(120% 80% at 70% 30%,#16295a 0%,var(--ink) 55%,#070f22 100%)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:130px 0 70px;background:radial-gradient(120% 80% at 70% 30%,#163f66 0%,var(--ink) 55%,#061a2c 100%)}
 #sky{position:absolute;inset:0;width:100%;height:100%}
-.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,rgba(7,15,34,.7));pointer-events:none}
-.hero-glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,58,.22),rgba(240,168,58,0) 65%);right:-120px;top:50%;translate:0 -50%;pointer-events:none;animation:breathe 7s ease-in-out infinite}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,rgba(6,26,44,.7));pointer-events:none}
+.hero-glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(249,155,0,.22),rgba(249,155,0,0) 65%);right:-120px;top:50%;translate:0 -50%;pointer-events:none;animation:breathe 7s ease-in-out infinite}
 @keyframes breathe{0%,100%{scale:1;opacity:.85}50%{scale:1.12;opacity:1}}
 .hero-inner{position:relative;z-index:2}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 10px;border:1px solid var(--navy-line);border-radius:999px;font-size:.8rem;color:var(--on-ink-2);background:rgba(255,255,255,.03);backdrop-filter:blur(6px)}
-.hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--nova);box-shadow:0 0 0 0 rgba(240,168,58,.6);animation:ping 2.4s infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,168,58,.55)}80%,100%{box-shadow:0 0 0 12px rgba(240,168,58,0)}}
+.hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--nova);box-shadow:0 0 0 0 rgba(249,155,0,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(249,155,0,.55)}80%,100%{box-shadow:0 0 0 12px rgba(249,155,0,0)}}
 .hero h1{font-size:clamp(3rem,8.4vw,7.6rem);margin:30px 0 28px;max-width:12ch;line-height:.98}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
 .hero h1 .ln>span{display:inline-block;transform:translateY(110%);transition:transform 1.3s var(--ease-out)}
@@ -163,7 +164,7 @@ body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)
 .marquee .track{display:flex;gap:0;width:max-content;animation:marq 42s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 .marquee span{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.3rem);font-weight:300;padding:0 28px;display:flex;align-items:center;gap:56px;white-space:nowrap}
-.marquee span::after{content:"";width:10px;height:10px;background:var(--nova);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.marquee span::after{content:"";width:10px;height:10px;background:var(--nova);width:14px;height:14px;clip-path:polygon(50% 0,55.4% 36.9%,74.2% 25.8%,63.1% 44.6%,100% 50%,63.1% 55.4%,74.2% 74.2%,55.4% 63.1%,50% 100%,44.6% 63.1%,25.8% 74.2%,36.9% 55.4%,0 50%,36.9% 44.6%,25.8% 25.8%,44.6% 36.9%)}
 .marquee span:nth-child(even){font-style:italic;color:var(--on-ink-2)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
@@ -255,7 +256,7 @@ body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)
 .tl-item{position:relative;padding:44px 22px 0 0;opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
 .tl.in .tl-item{opacity:1;transform:none}
 .tl-item::before{content:"";position:absolute;left:0;top:2px;width:15px;height:15px;border-radius:50%;background:var(--paper-2);border:2px solid var(--nova);transition:background .4s}
-.tl-item.now::before{background:var(--nova);box-shadow:0 0 0 6px rgba(240,168,58,.22)}
+.tl-item.now::before{background:var(--nova);box-shadow:0 0 0 6px rgba(249,155,0,.22)}
 .tl-item .yr{font-family:var(--display);font-size:1.9rem;line-height:1;letter-spacing:-.02em;margin-bottom:14px}
 .tl-item .yr small{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);display:block;margin-bottom:8px}
 .tl-item p{font-size:.9rem;color:var(--text-2)}
@@ -284,10 +285,10 @@ body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)
 .contact h2{margin:22px 0 22px}
 .contact-cards{display:grid;gap:14px;margin-top:40px}
 .c-card{display:flex;align-items:center;gap:18px;padding:20px 22px;border:1px solid var(--navy-line);border-radius:18px;transition:border-color .4s,background .4s}
-.c-card:hover{border-color:rgba(240,168,58,.5);background:rgba(255,255,255,.03)}
+.c-card:hover{border-color:rgba(249,155,0,.5);background:rgba(255,255,255,.03)}
 .c-card .ico{width:46px;height:46px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;padding:6px}
 .c-card .ico img{width:100%;height:100%;object-fit:contain}
-.c-card .ico.nm{background:rgba(240,168,58,.14);color:var(--nova)}
+.c-card .ico.nm{background:rgba(249,155,0,.14);color:var(--nova)}
 .c-card .ico.nm svg{width:24px;height:24px}
 .c-card div{min-width:0}
 .c-card b{display:block;font-weight:600;font-size:.96rem}
@@ -302,7 +303,7 @@ form.enq>p{color:var(--text-2);font-size:.94rem;margin-bottom:28px}
 .field input,.field select,.field textarea{width:100%;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 16px 10px;font-size:.95rem;outline:none;transition:border-color .3s,box-shadow .3s;appearance:none;-webkit-appearance:none}
 .field textarea{min-height:120px;resize:vertical}
 .field label{position:absolute;left:17px;top:17px;font-size:.92rem;color:var(--text-3);pointer-events:none;transition:all .3s var(--ease-out)}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--nova-lo);box-shadow:0 0 0 4px rgba(240,168,58,.16)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--nova-lo);box-shadow:0 0 0 4px rgba(249,155,0,.16)}
 .field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label,.field select+label{top:8px;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
 .field.sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border-right:1.5px solid var(--text-3);border-bottom:1.5px solid var(--text-3);transform:translateY(-70%) rotate(45deg);pointer-events:none}
 .seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
@@ -320,9 +321,10 @@ form.enq .btn{width:100%;margin-top:6px}
 .sent p{color:var(--text-2);max-width:34ch}
 
 /* ---------- footer ---------- */
-footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:relative;overflow:hidden}
+footer{background:#061a2c;color:var(--on-ink-2);padding:80px 0 34px;position:relative;overflow:hidden}
 .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:60px;border-bottom:1px solid var(--navy-line)}
 .foot-top .brand{color:var(--on-ink)}
+.foot-top .wm{font-size:2rem}
 .foot-top p{margin-top:16px;max-width:36ch;font-size:.92rem}
 .foot-cols{display:flex;gap:70px;flex-wrap:wrap}
 .foot-cols h4{font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--on-ink-3);margin-bottom:18px}
@@ -389,7 +391,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
 <!-- star symbol -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="star4" viewBox="0 0 24 24"><path d="M12 0c.9 6.6 4.4 10.4 12 12-7.6 1.6-11.1 5.4-12 12-.9-6.6-4.4-10.4-12-12C7.6 10.4 11.1 6.6 12 0Z" fill="currentColor"/></symbol>
+    <symbol id="star4" viewBox="0 0 24 24"><path d="M12 0 13.3 8.86 17.8 6.2 15.14 10.7 24 12 15.14 13.3 17.8 17.8 13.3 15.14 12 24 10.7 15.14 6.2 17.8 8.86 13.3 0 12 8.86 10.7 6.2 6.2 10.7 8.86Z" fill="currentColor"/></symbol>
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><path d="m7.5 12.3 3 3 6-6.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -399,13 +401,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="brand" aria-label="NovaMinds Education home">
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-opacity=".28"/>
-        <g class="star-core"><use href="#star4" x="6" y="6" width="20" height="20" style="color:var(--nova)"/></g>
-      </svg>
-      <span>NOVA<span class="m">Minds</span></span>
-    </a>
+    <a href="#top" class="brand" aria-label="NovaMinds Education home"><span class="wm">NOVAM<span class="wm-i">ı<svg class="wm-star" aria-hidden="true"><use href="#star4"/></svg></span>nds</span></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#vision">Vision</a>
       <a href="#brands">Our Brands</a>
@@ -450,7 +446,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
     </div>
   </div>
   <div class="wrap hero-foot hero-fade hf3">
-    <div class="scroll-cue"><span class="bar"></span> Seed passion · Inspire mastery</div>
+    <div class="scroll-cue"><span class="bar"></span> From first spark to boundless future</div>
     <div class="hero-brands"><span>Home of</span> Story Time Chess <span>&amp;</span> Julia Gabriel</div>
   </div>
 </section>
@@ -606,8 +602,8 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
     <div class="globe-map rv-fade" id="map">
       <svg viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map linking New York and Singapore head offices to the NovaMinds hub in Dubai">
         <defs>
-          <linearGradient id="arcg" x1="0" x2="1"><stop offset="0" stop-color="#8fb3ff" stop-opacity=".2"/><stop offset=".5" stop-color="#ffd28a"/><stop offset="1" stop-color="#8fb3ff" stop-opacity=".2"/></linearGradient>
-          <radialGradient id="hubg"><stop offset="0" stop-color="#f0a83a" stop-opacity=".55"/><stop offset="1" stop-color="#f0a83a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="arcg" x1="0" x2="1"><stop offset="0" stop-color="#8fb3ff" stop-opacity=".2"/><stop offset=".5" stop-color="#ffc65c"/><stop offset="1" stop-color="#8fb3ff" stop-opacity=".2"/></linearGradient>
+          <radialGradient id="hubg"><stop offset="0" stop-color="#f99b00" stop-opacity=".55"/><stop offset="1" stop-color="#f99b00" stop-opacity="0"/></radialGradient>
         </defs>
         <g id="dots"></g>
         <path id="arc1" class="arc a1" d="M200 250 Q 420 20 690 215"/>
@@ -621,7 +617,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
         </g>
         <g class="node hub" transform="translate(690 215)">
           <circle r="60" fill="url(#hubg)"/>
-          <circle class="ring" r="10"/><circle r="7" fill="#f0a83a"/>
+          <circle class="ring" r="10"/><circle r="7" fill="#f99b00"/>
           <text x="0" y="40" text-anchor="middle">Dubai</text>
           <text class="sm" x="0" y="60" text-anchor="middle">NovaMinds hub</text>
         </g>
@@ -761,10 +757,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <a href="#top" class="brand">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-opacity=".28"/><g class="star-core"><use href="#star4" x="6" y="6" width="20" height="20" style="color:var(--nova)"/></g></svg>
-          <span>NOVA<span class="m">Minds</span></span>
-        </a>
+        <a href="#top" class="brand" aria-label="NovaMinds Education home"><span class="wm">NOVAM<span class="wm-i">ı<svg class="wm-star" aria-hidden="true"><use href="#star4"/></svg></span>nds</span><span class="tag">From first spark to boundless future</span></a>
         <p>Seed passion, inspire mastery. World-class learning brands for children in Dubai and across the UAE.</p>
       </div>
       <div class="foot-cols">
@@ -840,7 +833,7 @@ footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:rel
       }
       const md = Math.hypot(mouse.x - a.x, mouse.y - a.y);
       if (md < 180) {
-        ctx.strokeStyle = `rgba(240,168,58,${(1 - md / 180) * .45})`;
+        ctx.strokeStyle = `rgba(249,155,0,${(1 - md / 180) * .45})`;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
       }
       const tw = .55 + Math.sin(a.t) * .45;
