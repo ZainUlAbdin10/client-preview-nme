@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NovaMinds Education — Seed Passion, Inspire Mastery · Dubai</title>
+<meta name="description" content="NovaMinds Education brings world-class learning brands — Story Time Chess and Julia Gabriel — to families in Dubai and the UAE. An education where curiosity is celebrated and individuality is honoured.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230b1630'/%3E%3Cpath d='M12 3c.6 4.4 2.9 6.9 8 8-5.1 1.1-7.4 3.6-8 8-.6-4.4-2.9-6.9-8-8 5.1-1.1 7.4-3.6 8-8Z' fill='%23f0a83a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1630; --ink-2:#111f40; --ink-3:#18295200; --navy-line:rgba(170,190,235,.14);
+  --paper:#f7f3ec; --paper-2:#efe9de; --paper-3:#e6dece; --white:#fffdf9;
+  --text:#14203b; --text-2:#46506a; --text-3:#7a8197;
+  --on-ink:#eef1f8; --on-ink-2:#aeb7cc; --on-ink-3:#7d88a3;
+  --nova:#f0a83a; --nova-hi:#ffd28a; --nova-lo:#c47f17;
+  --sky:#8fb3ff; --teal:#3c8f8a;
+  --line:rgba(20,32,59,.12); --line-2:rgba(20,32,59,.22);
+  --stc:#5b3c9e; --stc-2:#2a8fd0; --stc-gold:#f5c22b;
+  --jg:#d6262f;
+  --display:"Fraunces", Georgia, serif;
+  --sans:"Plus Jakarta Sans", system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--text);font:400 1rem/1.7 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+::selection{background:var(--nova);color:var(--ink)}
+
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.sec{padding:clamp(96px,12vw,160px) 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:12px;font:600 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--nova-lo)}
+.kicker svg{width:12px;height:12px;flex:none}
+.dark .kicker{color:var(--nova)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+h2{font-size:clamp(2.3rem,5vw,4.3rem)}
+h2 em,h1 em,h3 em{font-style:italic;font-weight:300;color:var(--nova-lo)}
+.dark h2 em,.dark h1 em{color:var(--nova-hi)}
+.lede{color:var(--text-2);font-size:1.08rem;max-width:56ch}
+.dark{background:var(--ink);color:var(--on-ink)}
+.dark .lede{color:var(--on-ink-2)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border-radius:999px;font:600 .9rem/1 var(--sans);letter-spacing:.01em;position:relative;overflow:hidden;isolation:isolate;transition:transform .5s var(--ease-out),color .4s var(--ease),border-color .4s;border:1px solid transparent;will-change:transform}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .5s var(--ease-out)}
+.btn:hover svg{transform:translateX(4px)}
+.btn.primary{background:var(--nova);color:var(--ink)}
+.btn.primary::before{content:"";position:absolute;inset:0;background:var(--nova-hi);transform:translateY(101%);transition:transform .55s var(--ease-out);z-index:-1;border-radius:inherit}
+.btn.primary:hover::before{transform:none}
+.btn.ghost{border-color:rgba(238,241,248,.28);color:var(--on-ink)}
+.btn.ghost:hover{border-color:var(--on-ink)}
+.btn.dark-btn{background:var(--ink);color:var(--on-ink)}
+.btn.dark-btn::before{content:"";position:absolute;inset:0;background:var(--ink-2);transform:translateY(101%);transition:transform .55s var(--ease-out);z-index:-1}
+.btn.dark-btn:hover::before{transform:none}
+.btn.outline{border-color:var(--line-2);color:var(--text)}
+.btn.outline:hover{border-color:var(--text)}
+
+/* reveal system */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease-out),transform 1.1s var(--ease-out)}
+.rv.in{opacity:1;transform:none}
+.rv-fade{opacity:0;transition:opacity 1.4s var(--ease)}
+.rv-fade.in{opacity:1}
+.d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}.d4{transition-delay:.32s!important}.d5{transition-delay:.4s!important}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:100;transition:background .5s var(--ease),border-color .5s,transform .6s var(--ease-out),color .5s;border-bottom:1px solid transparent;color:var(--on-ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.nav.solid{background:rgba(247,243,236,.86);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-color:var(--line);color:var(--text)}
+.nav.hide{transform:translateY(-100%)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--sans);font-weight:700;font-size:1.12rem;letter-spacing:.02em}
+.brand svg{width:30px;height:30px;flex:none}
+.brand .m{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.22rem;letter-spacing:-.01em;margin-left:-2px}
+.brand .star-core{transform-origin:center;animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.86) rotate(45deg)}}
+.nav-links{display:flex;gap:34px;font-size:.88rem;font-weight:500}
+.nav-links a{position:relative;opacity:.82;transition:opacity .3s}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--nova);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out)}
+.nav-links a:hover{opacity:1}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{padding:12px 20px;font-size:.84rem}
+.nav-toggle{display:none;width:44px;height:44px;border-radius:50%;border:1px solid currentColor;opacity:.7;align-items:center;justify-content:center}
+.nav-toggle span{display:block;width:16px;height:1.5px;background:currentColor;position:relative}
+.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:currentColor;transition:transform .4s var(--ease-out)}
+.nav-toggle span::before{top:-5px}.nav-toggle span::after{top:5px}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:var(--ink);color:var(--on-ink);display:flex;flex-direction:column;justify-content:center;padding:0 28px;gap:8px;clip-path:circle(0 at calc(100% - 38px) 39px);transition:clip-path .8s var(--ease-out);pointer-events:none}
+.mobile-menu.open{clip-path:circle(150% at calc(100% - 38px) 39px);pointer-events:auto}
+.mobile-menu a{font-family:var(--display);font-size:2.4rem;line-height:1.3}
+.mobile-menu a em{font-style:italic;color:var(--nova-hi)}
+body.menu-open .nav{color:var(--on-ink);background:transparent;border-color:transparent;backdrop-filter:none}
+body.menu-open .nav-toggle span{background:transparent}
+body.menu-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg)}
+body.menu-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:130px 0 70px;background:radial-gradient(120% 80% at 70% 30%,#16295a 0%,var(--ink) 55%,#070f22 100%)}
+#sky{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,rgba(7,15,34,.7));pointer-events:none}
+.hero-glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,58,.22),rgba(240,168,58,0) 65%);right:-120px;top:50%;translate:0 -50%;pointer-events:none;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{scale:1;opacity:.85}50%{scale:1.12;opacity:1}}
+.hero-inner{position:relative;z-index:2}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 10px;border:1px solid var(--navy-line);border-radius:999px;font-size:.8rem;color:var(--on-ink-2);background:rgba(255,255,255,.03);backdrop-filter:blur(6px)}
+.hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--nova);box-shadow:0 0 0 0 rgba(240,168,58,.6);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(240,168,58,.55)}80%,100%{box-shadow:0 0 0 12px rgba(240,168,58,0)}}
+.hero h1{font-size:clamp(3rem,8.4vw,7.6rem);margin:30px 0 28px;max-width:12ch;line-height:.98}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(110%);transition:transform 1.3s var(--ease-out)}
+.hero.go h1 .ln>span{transform:none}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
+.hero-sub{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;max-width:1000px}
+.hero-sub p{color:var(--on-ink-2);font-size:clamp(1.02rem,1.4vw,1.18rem);max-width:50ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out)}
+.hero.go .hero-fade{opacity:1;transform:none}
+.hero.go .hf1{transition-delay:.5s}.hero.go .hf2{transition-delay:.65s}.hero.go .hf3{transition-delay:.8s}
+.hero-foot{position:relative;z-index:2;margin-top:clamp(60px,9vw,110px);display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--on-ink-3)}
+.scroll-cue{display:flex;align-items:center;gap:14px}
+.scroll-cue .bar{width:1px;height:46px;background:rgba(238,241,248,.18);position:relative;overflow:hidden}
+.scroll-cue .bar::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--nova);animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{to{top:100%}}
+.hero-brands{display:flex;align-items:center;gap:22px}
+.hero-brands span{opacity:.5}
+
+/* ---------- manifesto ---------- */
+.manifesto{background:var(--paper)}
+.manifesto .grid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(30px,6vw,90px)}
+.manifesto .side{position:sticky;top:120px;align-self:start}
+.manifesto .side p{margin-top:18px;color:var(--text-3);font-size:.9rem;max-width:22ch}
+.scrub{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,3.9vw,3.4rem);line-height:1.22;letter-spacing:-.015em;font-variation-settings:"opsz" 100}
+.scrub .w{color:var(--text);opacity:.14;transition:opacity .35s var(--ease)}
+.scrub .w.on{opacity:1}
+.scrub .w.hl{font-style:italic;color:var(--nova-lo)}
+.sig{display:flex;align-items:center;gap:16px;margin-top:48px;color:var(--text-2);font-size:.92rem}
+.sig .ln{width:48px;height:1px;background:var(--line-2)}
+
+/* ---------- pillars ---------- */
+.pillars{background:var(--paper);padding-top:0}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.pillar{padding:40px 30px 46px;border-right:1px solid var(--line);position:relative;overflow:hidden;transition:background .6s var(--ease)}
+.pillar:first-child{padding-left:0}
+.pillar:last-child{border-right:0}
+.pillar::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--nova);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease-out)}
+.pillar.in::before{transform:scaleX(1)}
+.pillar svg{display:block}
+.pillar .num{display:block;font:500 .78rem/1 var(--sans);letter-spacing:.16em;color:var(--text-3)}
+.pillar svg{width:54px;height:54px;margin:34px 0 26px;color:var(--ink)}
+.pillar svg .draw{stroke-dasharray:var(--len,200);stroke-dashoffset:var(--len,200);transition:stroke-dashoffset 2s var(--ease-out) .3s}
+.pillar.in svg .draw{stroke-dashoffset:0}
+.pillar svg .dot{fill:var(--nova);transform-origin:center;transform-box:fill-box;scale:0;transition:scale .8s var(--ease-out) 1.2s}
+.pillar.in svg .dot{scale:1}
+.pillar h3{font-size:1.6rem;line-height:1.15;margin-bottom:12px}
+.pillar p{color:var(--text-2);font-size:.94rem}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:var(--on-ink);overflow:hidden;padding:26px 0;border-block:1px solid var(--navy-line)}
+.marquee .track{display:flex;gap:0;width:max-content;animation:marq 42s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.3rem);font-weight:300;padding:0 28px;display:flex;align-items:center;gap:56px;white-space:nowrap}
+.marquee span::after{content:"";width:10px;height:10px;background:var(--nova);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.marquee span:nth-child(even){font-style:italic;color:var(--on-ink-2)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- brands ---------- */
+.brands{background:var(--paper)}
+.brands-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:clamp(56px,7vw,90px)}
+.brands-head h2{margin-top:22px}
+.brand-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:28px;overflow:hidden;background:var(--white);border:1px solid var(--line);box-shadow:0 1px 0 rgba(20,32,59,.04),0 40px 80px -50px rgba(20,32,59,.35);margin-bottom:28px;position:relative}
+.brand-panel .media{position:relative;overflow:hidden;min-height:540px}
+.brand-panel .body{padding:clamp(34px,4.5vw,64px);display:flex;flex-direction:column}
+.brand-tag{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+.brand-tag .origin{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.brand-tag .origin b{width:6px;height:6px;border-radius:50%;background:currentColor}
+.brand-tag .idx{white-space:nowrap;font-family:var(--display);font-style:italic;font-size:1.05rem;color:var(--text-3)}
+.brand-panel h3{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:18px}
+.brand-panel .desc{color:var(--text-2);margin-bottom:28px;max-width:46ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.chip{font-size:.8rem;font-weight:500;padding:8px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--text-2)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);margin-top:auto}
+.fact{padding:22px 16px 0 0}
+.fact+.fact{padding-left:18px;border-left:1px solid var(--line)}
+.fact strong{display:block;font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1;letter-spacing:-.02em;margin-bottom:8px}
+.fact span{font-size:.8rem;color:var(--text-3);line-height:1.45;display:block}
+.brand-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+
+/* STC media */
+.stc .media{background:linear-gradient(160deg,#6b46b8 0%,var(--stc) 45%,#2c5fb8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 0 0}
+.stc .media::before{content:"";position:absolute;inset:0;background-image:linear-gradient(45deg,rgba(255,255,255,.06) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.06) 75%),linear-gradient(45deg,rgba(255,255,255,.06) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.06) 75%);background-size:80px 80px;background-position:0 0,40px 40px;opacity:.9}
+.stc .media .logo{position:relative;width:min(72%,380px);filter:drop-shadow(0 30px 40px rgba(20,10,60,.45));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+.stc .cast{position:relative;margin-top:auto;width:100%;overflow:hidden;padding-top:40px}
+.stc .cast .roll{display:flex;width:max-content;animation:marq 38s linear infinite}
+.stc .cast img{height:150px;width:auto;max-width:none}
+.stc .badge{position:absolute;top:24px;left:24px;z-index:2;background:var(--stc-gold);color:#2a1a55;font-size:.74rem;font-weight:700;letter-spacing:.06em;padding:9px 14px;border-radius:999px;display:flex;align-items:center;gap:8px}
+.stc .badge i{width:7px;height:7px;border-radius:50%;background:#2a1a55;animation:ping-d 2s infinite}
+@keyframes ping-d{0%{box-shadow:0 0 0 0 rgba(42,26,85,.5)}80%,100%{box-shadow:0 0 0 9px rgba(42,26,85,0)}}
+.stc .origin{color:var(--stc)}
+.stc h3 em{color:var(--stc)}
+
+/* JG media */
+.jg{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.jg .media{order:2}
+.jg .media img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:60% center;will-change:transform}
+.jg .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,22,48,0) 55%,rgba(11,22,48,.55))}
+.jg .jg-logo{position:absolute;left:28px;bottom:26px;z-index:2;background:var(--white);padding:14px 20px;border-radius:14px;box-shadow:0 20px 40px -16px rgba(0,0,0,.4)}
+.jg .jg-logo img{position:static;width:150px;height:auto;inset:auto}
+.jg .origin{color:var(--jg)}
+.jg h3 em{color:var(--jg)}
+.prog{list-style:none;margin-bottom:30px;border-top:1px solid var(--line)}
+.prog li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;transition:padding .5s var(--ease-out)}
+.prog li:hover{padding-left:10px}
+.prog li span:last-child{color:var(--text-3);font-size:.84rem;white-space:nowrap}
+
+.more-brand{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:30px 36px;border-radius:22px;border:1.5px dashed var(--line-2);color:var(--text-2)}
+.more-brand p{font-family:var(--display);font-size:1.4rem;color:var(--text)}
+.more-brand p em{font-style:italic;color:var(--nova-lo)}
+
+/* ---------- global ---------- */
+.global{overflow:hidden}
+.global .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:end}
+.global h2{margin-top:22px}
+.globe-map{position:relative;margin-top:clamp(50px,7vw,80px);aspect-ratio:1200/440;width:100%}
+.globe-map svg{width:100%;height:100%;overflow:visible}
+.globe-map .grid-dot{fill:rgba(170,190,235,.16)}
+.globe-map .arc{fill:none;stroke:url(#arcg);stroke-width:1.6;stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 2.6s var(--ease-out)}
+.globe-map.in .arc{stroke-dashoffset:0}
+.globe-map.in .arc.a2{transition-delay:.35s}
+.globe-map .pulse{fill:var(--nova)}
+.globe-map .node circle.ring{fill:none;stroke:var(--nova);stroke-width:1;transform-origin:center;transform-box:fill-box;animation:ring 3s var(--ease) infinite}
+@keyframes ring{0%{scale:.4;opacity:1}100%{scale:3.2;opacity:0}}
+.globe-map .node text{font-family:var(--sans);font-size:15px;font-weight:600;fill:var(--on-ink);letter-spacing:.04em}
+.globe-map .node text.sm{font-size:12px;font-weight:500;fill:var(--on-ink-3);letter-spacing:.12em;text-transform:uppercase}
+.globe-map .node.hub text{fill:var(--nova-hi)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(50px,6vw,80px);border-top:1px solid var(--navy-line)}
+.stat{padding:34px 24px 0 0}
+.stat+.stat{padding-left:28px;border-left:1px solid var(--navy-line)}
+.stat strong{display:block;font-family:var(--display);font-weight:300;font-size:clamp(2.8rem,5vw,4.4rem);line-height:1;letter-spacing:-.03em;color:var(--on-ink)}
+.stat strong sup{font-size:.45em;color:var(--nova);vertical-align:super;margin-left:2px}
+.stat>span{display:block;margin-top:14px;font-size:.88rem;color:var(--on-ink-2);max-width:24ch}
+
+/* ---------- timeline ---------- */
+.timeline{background:var(--paper-2)}
+.tl-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(50px,6vw,80px)}
+.tl-head h2{margin-top:22px}
+.tl{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+.tl::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-2)}
+.tl .prog-line{position:absolute;left:0;top:9px;height:2px;margin-top:-.5px;background:var(--nova);width:0;transition:width 2.8s var(--ease-out)}
+.tl.in .prog-line{width:100%}
+.tl-item{position:relative;padding:44px 22px 0 0;opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.tl.in .tl-item{opacity:1;transform:none}
+.tl-item::before{content:"";position:absolute;left:0;top:2px;width:15px;height:15px;border-radius:50%;background:var(--paper-2);border:2px solid var(--nova);transition:background .4s}
+.tl-item.now::before{background:var(--nova);box-shadow:0 0 0 6px rgba(240,168,58,.22)}
+.tl-item .yr{font-family:var(--display);font-size:1.9rem;line-height:1;letter-spacing:-.02em;margin-bottom:14px}
+.tl-item .yr small{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);display:block;margin-bottom:8px}
+.tl-item p{font-size:.9rem;color:var(--text-2)}
+.tl-item p b{color:var(--text);font-weight:600}
+
+/* ---------- audiences ---------- */
+.aud-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.aud{border-radius:28px;padding:clamp(34px,4.5vw,60px);position:relative;overflow:hidden;min-height:440px;display:flex;flex-direction:column;isolation:isolate;transition:transform .7s var(--ease-out)}
+.aud:hover{transform:translateY(-6px)}
+.aud.parents{background:var(--white);border:1px solid var(--line)}
+.aud.schools{background:var(--ink);color:var(--on-ink)}
+.aud .big{position:absolute;right:-20px;bottom:-60px;font-family:var(--display);font-style:italic;font-size:16rem;line-height:1;opacity:.05;z-index:-1;pointer-events:none}
+.aud.schools .big{opacity:.07}
+.aud h3{font-size:clamp(1.9rem,3vw,2.6rem);margin:26px 0 16px}
+.aud p{color:var(--text-2);max-width:42ch}
+.aud.schools p{color:var(--on-ink-2)}
+.aud ul{list-style:none;margin:26px 0 34px;display:grid;gap:12px}
+.aud li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem}
+.aud li svg{width:18px;height:18px;flex:none;margin-top:4px;color:var(--nova-lo)}
+.aud.schools li svg{color:var(--nova)}
+.aud .btn{margin-top:auto;align-self:flex-start}
+
+/* ---------- contact ---------- */
+.contact{overflow:hidden}
+.contact .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px,6vw,90px)}
+.contact h2{margin:22px 0 22px}
+.contact-cards{display:grid;gap:14px;margin-top:40px}
+.c-card{display:flex;align-items:center;gap:18px;padding:20px 22px;border:1px solid var(--navy-line);border-radius:18px;transition:border-color .4s,background .4s}
+.c-card:hover{border-color:rgba(240,168,58,.5);background:rgba(255,255,255,.03)}
+.c-card .ico{width:46px;height:46px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;padding:6px}
+.c-card .ico img{width:100%;height:100%;object-fit:contain}
+.c-card .ico.nm{background:rgba(240,168,58,.14);color:var(--nova)}
+.c-card .ico.nm svg{width:24px;height:24px}
+.c-card div{min-width:0}
+.c-card b{display:block;font-weight:600;font-size:.96rem}
+.c-card small{display:block;color:var(--on-ink-2);font-size:.84rem;overflow-wrap:anywhere}
+.c-card .arr{margin-left:auto;width:18px;height:18px;color:var(--on-ink-3);flex:none;transition:transform .5s var(--ease-out),color .3s}
+.c-card:hover .arr{transform:translate(3px,-3px);color:var(--nova)}
+form.enq{background:var(--paper);color:var(--text);border-radius:28px;padding:clamp(28px,4vw,50px);position:relative}
+form.enq h3{font-size:1.9rem;margin-bottom:8px}
+form.enq>p{color:var(--text-2);font-size:.94rem;margin-bottom:28px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{position:relative;margin-bottom:14px}
+.field input,.field select,.field textarea{width:100%;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 16px 10px;font-size:.95rem;outline:none;transition:border-color .3s,box-shadow .3s;appearance:none;-webkit-appearance:none}
+.field textarea{min-height:120px;resize:vertical}
+.field label{position:absolute;left:17px;top:17px;font-size:.92rem;color:var(--text-3);pointer-events:none;transition:all .3s var(--ease-out)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--nova-lo);box-shadow:0 0 0 4px rgba(240,168,58,.16)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label,.field select+label{top:8px;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.field.sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border-right:1.5px solid var(--text-3);border-bottom:1.5px solid var(--text-3);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:10px 16px;border-radius:999px;border:1px solid var(--line);font-size:.85rem;cursor:pointer;transition:all .3s var(--ease)}
+.seg input:checked+label{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.seg input:focus-visible+label{outline:2px solid var(--nova-lo);outline-offset:2px}
+form.enq .btn{width:100%;margin-top:6px}
+.sent{position:absolute;inset:0;border-radius:inherit;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;opacity:0;pointer-events:none;transition:opacity .6s var(--ease)}
+.sent.show{opacity:1;pointer-events:auto}
+.sent svg{width:70px;height:70px;color:var(--nova-lo);margin-bottom:20px}
+.sent svg path{stroke-dasharray:60;stroke-dashoffset:60;transition:stroke-dashoffset 1s var(--ease-out) .3s}
+.sent.show svg path{stroke-dashoffset:0}
+.sent h3{font-size:2rem;margin-bottom:10px}
+.sent p{color:var(--text-2);max-width:34ch}
+
+/* ---------- footer ---------- */
+footer{background:#070f22;color:var(--on-ink-2);padding:80px 0 34px;position:relative;overflow:hidden}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:60px;border-bottom:1px solid var(--navy-line)}
+.foot-top .brand{color:var(--on-ink)}
+.foot-top p{margin-top:16px;max-width:36ch;font-size:.92rem}
+.foot-cols{display:flex;gap:70px;flex-wrap:wrap}
+.foot-cols h4{font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--on-ink-3);margin-bottom:18px}
+.foot-cols a{display:block;font-size:.92rem;margin-bottom:10px;transition:color .3s}
+.foot-cols a:hover{color:var(--nova-hi)}
+.foot-word{font-family:var(--display);font-weight:300;font-size:clamp(4rem,15vw,15rem);line-height:.9;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(170,190,235,.16);text-align:center;margin:50px 0 10px;white-space:nowrap;user-select:none}
+.foot-word em{font-style:italic}
+.foot-bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:var(--on-ink-3)}
+
+.progress{position:fixed;left:0;top:0;height:2px;background:var(--nova);z-index:101;width:100%;transform-origin:left;transform:scaleX(0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pillar:nth-child(2){border-right:0}
+  .pillar:nth-child(3){padding-left:0}
+  .pillar:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .tl{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:50px}
+  .tl::before,.tl .prog-line{display:none}
+  .tl-item{border-top:1px solid var(--line-2)}
+  .tl-item::before{top:-8px}
+}
+@media (max-width:900px){
+  .nav-links,.nav .btn{display:none}
+  .nav-toggle{display:flex}
+  .hero-sub{grid-template-columns:1fr;gap:0}
+  .manifesto .grid,.brands-head,.global .top,.contact .grid,.aud-grid{grid-template-columns:1fr}
+  .manifesto .side{position:static}
+  .brand-panel,.jg{grid-template-columns:1fr}
+  .jg .media{order:0}
+  .brand-panel .media{min-height:380px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){padding-left:0;border-left:0}
+  .stat:nth-child(n+3){margin-top:30px}
+  .globe-map{aspect-ratio:1200/600}
+}
+@media (max-width:620px){
+  .pillar-grid{grid-template-columns:1fr}
+  .pillar{padding:30px 0 34px!important;border-right:0!important;border-bottom:1px solid var(--line)}
+  .pillar svg{margin:22px 0 18px}
+  .tl{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:1fr 1fr 1fr}
+  .fact strong{font-size:1.5rem}
+  .fact+.fact{padding-left:12px}
+  .f-row{grid-template-columns:1fr}
+  .hero-foot .hero-brands{display:none}
+  .stc .cast img{height:110px}
+  .more-brand{padding:24px}
+  .aud .big{font-size:10rem}
+  .globe-map{aspect-ratio:1200/700}
+  .globe-map .node text{font-size:38px;transform:translateY(22px)}
+  .globe-map .node text.sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .scrub .w{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- star symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star4" viewBox="0 0 24 24"><path d="M12 0c.9 6.6 4.4 10.4 12 12-7.6 1.6-11.1 5.4-12 12-.9-6.6-4.4-10.4-12-12C7.6 10.4 11.1 6.6 12 0Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><path d="m7.5 12.3 3 3 6-6.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="NovaMinds Education home">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-opacity=".28"/>
+        <g class="star-core"><use href="#star4" x="6" y="6" width="20" height="20" style="color:var(--nova)"/></g>
+      </svg>
+      <span>NOVA<span class="m">Minds</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#vision">Vision</a>
+      <a href="#brands">Our Brands</a>
+      <a href="#global">Global Roots</a>
+      <a href="#journey">Journey</a>
+      <a href="#partner">Partner</a>
+    </nav>
+    <a href="#contact" class="btn primary">Get in touch <svg><use href="#arrow"/></svg></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#vision">Our <em>vision</em></a>
+  <a href="#brands">Our <em>brands</em></a>
+  <a href="#global">Global <em>roots</em></a>
+  <a href="#journey">The <em>journey</em></a>
+  <a href="#partner">Partner <em>with us</em></a>
+  <a href="#contact">Get in <em>touch</em></a>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero dark" id="hero">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow hero-fade hf1"><i></i> NovaMinds Education · Dubai, UAE</span>
+    <h1>
+      <span class="ln"><span>Where</span></span>
+      <span class="ln"><span>curiosity is</span></span>
+      <span class="ln"><span><em>celebrated.</em></span></span>
+    </h1>
+    <div class="hero-sub">
+      <div>
+        <p class="hero-fade hf2">We bring the world's most loved learning brands to families in the UAE, so children grow into confident, compassionate thinkers ready for a future we can't yet see.</p>
+        <div class="hero-cta hero-fade hf3">
+          <a href="#brands" class="btn primary">Explore our brands <svg><use href="#arrow"/></svg></a>
+          <a href="#vision" class="btn ghost">Our vision</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap hero-foot hero-fade hf3">
+    <div class="scroll-cue"><span class="bar"></span> Seed passion · Inspire mastery</div>
+    <div class="hero-brands"><span>Home of</span> Story Time Chess <span>&amp;</span> Julia Gabriel</div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="sec manifesto" id="vision">
+  <div class="wrap grid">
+    <div class="side rv">
+      <span class="kicker"><svg><use href="#star4"/></svg>Our Vision</span>
+      <p>Why NovaMinds exists, in a single sentence.</p>
+    </div>
+    <div>
+      <p class="scrub" id="scrub" data-hl="curiosity,individuality,confident,compassionate,thrive">NovaMinds was born from a single vision: to create an education system where curiosity is celebrated, individuality is honoured, and children grow into confident, compassionate thinkers who can thrive in a future we can't yet see.</p>
+      <div class="sig rv"><span class="ln"></span>The NovaMinds founding vision</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILLARS ============ -->
+<section class="sec pillars" aria-label="Our principles">
+  <div class="wrap">
+    <div class="pillar-grid">
+      <article class="pillar rv">
+        <span class="num">01</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle class="draw" cx="24" cy="24" r="15"/><path class="draw" d="m35 35 12 12"/><path class="draw" d="M17 22a8 8 0 0 1 8-6"/><circle class="dot" cx="24" cy="24" r="3" stroke="none"/>
+        </svg>
+        <h3>Curiosity, celebrated</h3>
+        <p>Questions are where learning starts. Our classes are built to spark wonder and keep it alive.</p>
+      </article>
+      <article class="pillar rv d1">
+        <span class="num">02</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle class="draw" cx="14" cy="18" r="5"/><circle class="draw" cx="42" cy="18" r="5"/><path class="draw" d="M6 40c0-6 4-10 8-10s8 4 8 10M34 40c0-6 4-10 8-10s8 4 8 10"/><circle class="dot" cx="28" cy="12" r="3.4" stroke="none"/>
+        </svg>
+        <h3>Individuality, honoured</h3>
+        <p>No two children learn the same way. We teach the child in front of us, not the average.</p>
+      </article>
+      <article class="pillar rv d2">
+        <span class="num">03</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path class="draw" d="M10 46V30M22 46V22M34 46V14M46 46V8"/><path class="draw" d="M6 50h44"/><circle class="dot" cx="46" cy="6" r="3.4" stroke="none"/>
+        </svg>
+        <h3>Confident thinkers</h3>
+        <p>Speaking up, solving problems and planning ahead. Skills that last long after the lesson ends.</p>
+      </article>
+      <article class="pillar rv d3">
+        <span class="num">04</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path class="draw" d="M28 46S8 34 8 21a10 10 0 0 1 20-3 10 10 0 0 1 20 3c0 13-20 25-20 25Z"/><circle class="dot" cx="28" cy="25" r="3.4" stroke="none"/>
+        </svg>
+        <h3>Compassionate hearts</h3>
+        <p>Teamwork, empathy and kindness grow alongside every new skill we teach.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Focus</span><span>Memory</span><span>Problem-solving</span><span>Creativity</span><span>Teamwork</span><span>Communication</span><span>Confidence</span><span>Expression</span>
+    <span>Focus</span><span>Memory</span><span>Problem-solving</span><span>Creativity</span><span>Teamwork</span><span>Communication</span><span>Confidence</span><span>Expression</span>
+  </div>
+</div>
+
+<!-- ============ BRANDS ============ -->
+<section class="sec brands" id="brands">
+  <div class="wrap">
+    <div class="brands-head">
+      <div class="rv">
+        <span class="kicker"><svg><use href="#star4"/></svg>Our Brands</span>
+        <h2>World-class learning brands, <em>brought home</em> to Dubai.</h2>
+      </div>
+      <p class="lede rv d1">Each NovaMinds brand comes with decades of proven teaching behind it. Its curriculum is developed by its head office in the United States or Singapore, and our team delivers it here in the UAE with the same care.</p>
+    </div>
+
+    <!-- Story Time Chess -->
+    <article class="brand-panel stc rv">
+      <div class="media">
+        <span class="badge"><i></i> Dubai learning centre · opening Oct 2026</span>
+        <img class="logo" src="images/stc-logo.png" alt="Story Time Chess logo" width="640" height="451">
+        <div class="cast" aria-hidden="true">
+          <div class="roll">
+            <img src="images/stc-characters.png" alt="" width="1600" height="216">
+            <img src="images/stc-characters.png" alt="" width="1600" height="216">
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="brand-tag"><span class="origin"><b></b>Head office · United States</span><span class="idx">01 / 02</span></div>
+        <h3>Story Time <em>Chess</em></h3>
+        <p class="desc">An award-winning programme that teaches chess through stories. Every piece is a character, like King Chomper, and every move is part of an adventure. Children as young as three learn the game while building the skills it takes to think clearly.</p>
+        <div class="chips">
+          <span class="chip">Focus &amp; memory</span><span class="chip">Problem-solving</span><span class="chip">Creativity</span><span class="chip">Teamwork</span><span class="chip">Certified instructors</span>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>3+</strong><span>Years old, the youngest age we start</span></div>
+          <div class="fact"><strong>UAE</strong><span>Partner schools across the Emirates</span></div>
+          <div class="fact"><strong>Camps</strong><span>Plus classes and school programmes</span></div>
+        </div>
+        <div class="brand-links">
+          <a href="https://www.storytimechess.ae/" target="_blank" rel="noopener" class="btn dark-btn">Visit storytimechess.ae <svg><use href="#arrow-ne"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Julia Gabriel -->
+    <article class="brand-panel jg rv">
+      <div class="media">
+        <img src="images/jg-class.jpg" alt="A Julia Gabriel teacher working with young students at a table" data-parallax width="1600" height="1067" loading="lazy">
+        <div class="jg-logo"><img src="images/jg-logo.png" alt="Julia Gabriel logo" width="336" height="80"></div>
+      </div>
+      <div class="body">
+        <div class="brand-tag"><span class="origin"><b></b>Head office · Singapore · since 1983</span><span class="idx">02 / 02</span></div>
+        <h3>Julia <em>Gabriel</em></h3>
+        <p class="desc">Four decades of helping children find their voice. Through the signature EduDrama® approach, children express themselves through speech, language, music, movement, art, writing, performance and debate, all in a warm and joyful setting.</p>
+        <ul class="prog">
+          <li><span>PlayNest &amp; PlayClub · early learning</span><span>6 months +</span></li>
+          <li><span>Speech &amp; Drama</span><span>Ages 3 – 6</span></li>
+          <li><span>Mandarin Language Learners</span><span>Ages 3 – 6</span></li>
+          <li><span>Readers &amp; Writers</span><span>Literacy</span></li>
+        </ul>
+        <div class="facts">
+          <div class="fact"><strong data-count="40" data-suffix="+">0</strong><span>Years of teaching excellence</span></div>
+          <div class="fact"><strong>Al Safa</strong><span>At Cascade Education, Dubai</span></div>
+          <div class="fact"><strong>JVT</strong><span>At Sunmarke School, Dubai</span></div>
+        </div>
+        <div class="brand-links">
+          <a href="https://juliagabriel.ae/" target="_blank" rel="noopener" class="btn dark-btn">Visit juliagabriel.ae <svg><use href="#arrow-ne"/></svg></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="more-brand rv">
+      <p>More brands are <em>on the way.</em></p>
+      <span>NovaMinds is always looking for great learning brands to bring to the UAE.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOBAL ============ -->
+<section class="sec global dark" id="global">
+  <div class="wrap">
+    <div class="top">
+      <div class="rv">
+        <span class="kicker"><svg><use href="#star4"/></svg>Global Roots</span>
+        <h2>Global curricula. <em>Local heart.</em></h2>
+      </div>
+      <p class="lede rv d1">Our brands' teaching methods are developed and kept current by their founding teams in New York and Singapore. NovaMinds is their partner in the UAE. We hire and train the teachers, run the centres and work with local schools, so families here get the original programme.</p>
+    </div>
+
+    <div class="globe-map rv-fade" id="map">
+      <svg viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map linking New York and Singapore head offices to the NovaMinds hub in Dubai">
+        <defs>
+          <linearGradient id="arcg" x1="0" x2="1"><stop offset="0" stop-color="#8fb3ff" stop-opacity=".2"/><stop offset=".5" stop-color="#ffd28a"/><stop offset="1" stop-color="#8fb3ff" stop-opacity=".2"/></linearGradient>
+          <radialGradient id="hubg"><stop offset="0" stop-color="#f0a83a" stop-opacity=".55"/><stop offset="1" stop-color="#f0a83a" stop-opacity="0"/></radialGradient>
+        </defs>
+        <g id="dots"></g>
+        <path id="arc1" class="arc a1" d="M200 250 Q 420 20 690 215"/>
+        <path id="arc2" class="arc a2" d="M690 215 Q 870 110 1010 300"/>
+        <circle r="4" class="pulse"><animateMotion dur="4.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#arc1"/></animateMotion></circle>
+        <circle r="4" class="pulse"><animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#arc2"/></animateMotion></circle>
+        <g class="node" transform="translate(200 250)">
+          <circle class="ring" r="8"/><circle r="5" fill="#8fb3ff"/>
+          <text x="0" y="34" text-anchor="middle">New York</text>
+          <text class="sm" x="0" y="54" text-anchor="middle">Story Time Chess</text>
+        </g>
+        <g class="node hub" transform="translate(690 215)">
+          <circle r="60" fill="url(#hubg)"/>
+          <circle class="ring" r="10"/><circle r="7" fill="#f0a83a"/>
+          <text x="0" y="40" text-anchor="middle">Dubai</text>
+          <text class="sm" x="0" y="60" text-anchor="middle">NovaMinds hub</text>
+        </g>
+        <g class="node" transform="translate(1010 300)">
+          <circle class="ring" r="8"/><circle r="5" fill="#8fb3ff"/>
+          <text x="0" y="34" text-anchor="middle">Singapore</text>
+          <text class="sm" x="0" y="54" text-anchor="middle">Julia Gabriel</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="stats">
+      <div class="stat rv"><strong><span data-count="40">0</span><sup>+</sup></strong><span>Years of teaching legacy behind our brands</span></div>
+      <div class="stat rv d1"><strong><span data-count="9">0</span></strong><span>Countries in the Julia Gabriel network</span></div>
+      <div class="stat rv d2"><strong><span data-count="6">0</span><sup>mo</sup></strong><span>Age of our youngest learners</span></div>
+      <div class="stat rv d3"><strong><span data-count="2">0</span><sup>+</sup></strong><span>Learning brands, with more to come</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="sec timeline" id="journey">
+  <div class="wrap">
+    <div class="tl-head">
+      <div class="rv">
+        <span class="kicker"><svg><use href="#star4"/></svg>The Journey</span>
+        <h2>A legacy that <em>keeps growing.</em></h2>
+      </div>
+      <p class="lede rv d1">From a home studio in Singapore to new centres in Dubai, this is the story behind the brands NovaMinds brings to the UAE.</p>
+    </div>
+    <div class="tl" id="tl">
+      <span class="prog-line"></span>
+      <div class="tl-item"><div class="yr"><small>Singapore</small>1983</div><p><b>Julia Gabriel</b> begins teaching speech and drama from her home.</p></div>
+      <div class="tl-item"><div class="yr"><small>Singapore</small>1990</div><p>The first <b>Julia Gabriel Centre</b> opens at Halifax Road.</p></div>
+      <div class="tl-item"><div class="yr"><small>Worldwide</small>2002</div><p>Julia Gabriel begins expanding across Asia, Australia and the Middle East.</p></div>
+      <div class="tl-item"><div class="yr"><small>Dubai</small>NovaMinds</div><p><b>NovaMinds Education</b> brings both brands to the UAE under one roof.</p></div>
+      <div class="tl-item"><div class="yr"><small>Sept 2026</small>Sunmarke</div><p>Julia Gabriel opens at <b>Sunmarke School</b>, Jumeirah Village Triangle.</p></div>
+      <div class="tl-item now"><div class="yr"><small>Oct 2026</small>New centre</div><p>The first dedicated <b>Story Time Chess</b> learning centre opens in Dubai.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCES ============ -->
+<section class="sec" id="partner">
+  <div class="wrap">
+    <div class="aud-grid">
+      <article class="aud parents rv">
+        <span class="big" aria-hidden="true">P</span>
+        <span class="kicker"><svg><use href="#star4"/></svg>For Parents</span>
+        <h3>Find the right class for <em>your child.</em></h3>
+        <p>From baby classes at 6 months to chess, drama and Mandarin for young learners, we'll help you choose the right programme.</p>
+        <ul>
+          <li><svg><use href="#check"/></svg>Free trial classes and assessments</li>
+          <li><svg><use href="#check"/></svg>Small groups grouped by age</li>
+          <li><svg><use href="#check"/></svg>Holiday camps and term-time programmes</li>
+        </ul>
+        <a href="#contact" class="btn dark-btn" data-topic="parent">Book a trial class <svg><use href="#arrow"/></svg></a>
+      </article>
+      <article class="aud schools rv d1">
+        <span class="big" aria-hidden="true">S</span>
+        <span class="kicker"><svg><use href="#star4"/></svg>For Schools</span>
+        <h3>Bring our programmes <em>into your school.</em></h3>
+        <p>We already work with partner schools across the UAE. Our certified instructors bring well-tested curricula to your timetable or after-school programme.</p>
+        <ul>
+          <li><svg><use href="#check"/></svg>In-school and after-school programmes</li>
+          <li><svg><use href="#check"/></svg>Trained, certified NovaMinds instructors</li>
+          <li><svg><use href="#check"/></svg>Curriculum aligned to early-years goals</li>
+        </ul>
+        <a href="#contact" class="btn primary" data-topic="school">Become a partner school <svg><use href="#arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact dark" id="contact">
+  <div class="wrap grid">
+    <div>
+      <div class="rv">
+        <span class="kicker"><svg><use href="#star4"/></svg>Get in touch</span>
+        <h2>Let's start the <em>conversation.</em></h2>
+        <p class="lede">Whether you're a parent, a school or a brand looking for a partner in the UAE, we'd love to hear from you.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="c-card rv d1" href="mailto:enquiries@storytimechess.ae">
+          <span class="ico"><img src="images/stc-logo.png" alt=""></span>
+          <div><b>Story Time Chess</b><small>enquiries@storytimechess.ae · +971 50 106 8102</small></div>
+          <svg class="arr"><use href="#arrow-ne"/></svg>
+        </a>
+        <a class="c-card rv d2" href="mailto:enquiries@juliagabriel.ae">
+          <span class="ico"><img src="images/jg-logo.png" alt=""></span>
+          <div><b>Julia Gabriel UAE</b><small>enquiries@juliagabriel.ae · +971 54 595 2794</small></div>
+          <svg class="arr"><use href="#arrow-ne"/></svg>
+        </a>
+        <a class="c-card rv d3" href="https://www.linkedin.com/company/nova-minds-education/" target="_blank" rel="noopener">
+          <span class="ico nm"><svg><use href="#star4"/></svg></span>
+          <div><b>NovaMinds on LinkedIn</b><small>News, careers and updates</small></div>
+          <svg class="arr"><use href="#arrow-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="enq rv d2" id="enq" novalidate>
+      <h3>Send an enquiry</h3>
+      <p>We usually reply within one working day.</p>
+      <div class="seg" role="radiogroup" aria-label="I am a">
+        <input type="radio" name="who" id="w1" value="parent" checked><label for="w1">Parent</label>
+        <input type="radio" name="who" id="w2" value="school"><label for="w2">School</label>
+        <input type="radio" name="who" id="w3" value="brand"><label for="w3">Brand partner</label>
+        <input type="radio" name="who" id="w4" value="career"><label for="w4">Careers</label>
+      </div>
+      <div class="f-row">
+        <div class="field"><input id="fn" name="name" placeholder=" " required autocomplete="name"><label for="fn">Full name</label></div>
+        <div class="field"><input id="fe" name="email" type="email" placeholder=" " required autocomplete="email"><label for="fe">Email</label></div>
+      </div>
+      <div class="f-row">
+        <div class="field"><input id="fp" name="phone" type="tel" placeholder=" " autocomplete="tel"><label for="fp">Phone (optional)</label></div>
+        <div class="field sel">
+          <select id="fb" name="brand"><option>Not sure yet</option><option>Story Time Chess</option><option>Julia Gabriel</option></select>
+          <label for="fb">Interested in</label>
+        </div>
+      </div>
+      <div class="field"><textarea id="fm" name="message" placeholder=" "></textarea><label for="fm">How can we help?</label></div>
+      <button type="submit" class="btn dark-btn">Send enquiry <svg><use href="#arrow"/></svg></button>
+      <div class="sent" id="sent" aria-live="polite">
+        <svg viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="35" r="32" stroke-opacity=".3"/><path d="m22 36 9 9 17-19"/></svg>
+        <h3>Thank you.</h3>
+        <p>Your enquiry is on its way. A member of the NovaMinds team will be in touch soon.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#top" class="brand">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-opacity=".28"/><g class="star-core"><use href="#star4" x="6" y="6" width="20" height="20" style="color:var(--nova)"/></g></svg>
+          <span>NOVA<span class="m">Minds</span></span>
+        </a>
+        <p>Seed passion, inspire mastery. World-class learning brands for children in Dubai and across the UAE.</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>Brands</h4>
+          <a href="https://www.storytimechess.ae/" target="_blank" rel="noopener">Story Time Chess</a>
+          <a href="https://juliagabriel.ae/" target="_blank" rel="noopener">Julia Gabriel</a>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="#vision">Vision</a>
+          <a href="#global">Global roots</a>
+          <a href="#partner">Partner with us</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/company/nova-minds-education/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://novamindseducation.com/" target="_blank" rel="noopener">novamindseducation.com</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Nova<em>Minds</em></div>
+    <div class="foot-bot">
+      <span>© 2026 NovaMinds Education · Dubai, United Arab Emirates</span>
+      <span>Story Time Chess® and Julia Gabriel / EduDrama® are trademarks of their respective owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  /* ---------- hero intro ---------- */
+  requestAnimationFrame(() => setTimeout(() => $('#hero').classList.add('go'), 120));
+
+  /* ---------- constellation canvas ---------- */
+  const cv = $('#sky'), ctx = cv.getContext('2d');
+  let W, H, DPR, stars = [], mouse = {x: -9999, y: -9999}, heroVisible = true;
+  function size() {
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    W = cv.offsetWidth; H = cv.offsetHeight;
+    cv.width = W * DPR; cv.height = H * DPR; ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    const n = Math.round(Math.min(130, W * H / 11000));
+    stars = Array.from({length: n}, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18,
+      r: Math.random() * 1.4 + .4, t: Math.random() * Math.PI * 2,
+      warm: Math.random() < .14
+    }));
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const LINK = Math.min(150, W / 9);
+    for (let i = 0; i < stars.length; i++) {
+      const a = stars[i];
+      if (!reduce) {
+        a.x += a.vx; a.y += a.vy; a.t += .02;
+        const dx = mouse.x - a.x, dy = mouse.y - a.y, d = Math.hypot(dx, dy);
+        if (d < 180) { a.x += dx * .004; a.y += dy * .004; }
+        if (a.x < -20) a.x = W + 20; if (a.x > W + 20) a.x = -20;
+        if (a.y < -20) a.y = H + 20; if (a.y > H + 20) a.y = -20;
+      }
+      for (let j = i + 1; j < stars.length; j++) {
+        const b = stars[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < LINK) {
+          ctx.strokeStyle = `rgba(160,185,240,${(1 - d / LINK) * .22})`;
+          ctx.lineWidth = .7; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+      const md = Math.hypot(mouse.x - a.x, mouse.y - a.y);
+      if (md < 180) {
+        ctx.strokeStyle = `rgba(240,168,58,${(1 - md / 180) * .45})`;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+      }
+      const tw = .55 + Math.sin(a.t) * .45;
+      ctx.fillStyle = a.warm ? `rgba(255,210,138,${.5 + tw * .5})` : `rgba(230,236,250,${.35 + tw * .55})`;
+      ctx.beginPath(); ctx.arc(a.x, a.y, a.r * (a.warm ? 1.5 : 1), 0, Math.PI * 2); ctx.fill();
+    }
+    if (heroVisible && !reduce) requestAnimationFrame(draw);
+  }
+  size(); draw();
+  addEventListener('resize', () => { size(); if (reduce) draw(); });
+  $('#hero').addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  $('#hero').addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  new IntersectionObserver(([e]) => { const was = heroVisible; heroVisible = e.isIntersecting; if (heroVisible && !was && !reduce) draw(); }).observe($('#hero'));
+
+  /* ---------- reveal on scroll ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold: .15, rootMargin: '0px 0px -6% 0px'});
+  $$('.rv, .rv-fade, .pillar, #tl').forEach(el => io.observe(el));
+
+  /* pillar line lengths */
+  $$('.pillar .draw').forEach(p => { try { p.style.setProperty('--len', Math.ceil(p.getTotalLength()) + 1); } catch (_) {} });
+
+  /* timeline stagger */
+  $$('#tl .tl-item').forEach((it, i) => it.style.transitionDelay = (.25 + i * .35) + 's');
+
+  /* ---------- scroll-lit manifesto ---------- */
+  const scrub = $('#scrub');
+  const hl = scrub.dataset.hl.split(',');
+  scrub.innerHTML = scrub.textContent.trim().split(/\s+/).map(w => {
+    const bare = w.toLowerCase().replace(/[^a-z']/g, '');
+    return `<span class="w${hl.includes(bare) ? ' hl' : ''}">${w}</span>`;
+  }).join(' ');
+  const words = $$('.w', scrub);
+
+  /* ---------- counters ---------- */
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
+    cio.unobserve(el);
+    if (reduce) { el.textContent = end + suf; return; }
+    const t0 = performance.now(), dur = 1800;
+    const step = t => { const p = Math.min(1, (t - t0) / dur), v = 1 - Math.pow(1 - p, 4); el.textContent = Math.round(end * v) + suf; if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), {threshold: .6});
+  $$('[data-count]').forEach(el => cio.observe(el));
+
+  /* ---------- map dots (stylised world grid) ---------- */
+  (() => {
+    const g = $('#dots'); if (!g) return;
+    // coarse continent masks in map space (x 0-1200, y 0-440)
+    const blobs = [[120,120,170,95],[230,260,90,110],[260,350,60,80],[560,110,90,70],[600,250,85,120],[700,180,80,55],[820,130,190,90],[930,250,90,60],[1040,350,80,45]];
+    let out = '';
+    for (let x = 20; x < 1200; x += 16) for (let y = 20; y < 430; y += 16) {
+      const inside = blobs.some(([cx, cy, rx, ry]) => ((x - cx) ** 2) / rx ** 2 + ((y - cy) ** 2) / ry ** 2 < 1);
+      if (inside && Math.random() > .18) out += `<circle class="grid-dot" cx="${x}" cy="${y}" r="1.8"/>`;
+    }
+    g.innerHTML = out;
+  })();
+
+  /* ---------- scroll loop: progress, nav, scrub, parallax ---------- */
+  const nav = $('#nav'), bar = $('#progress'), par = $('[data-parallax]');
+  let lastY = scrollY, ticking = false;
+  function onScroll() {
+    const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    const pastHero = y > innerHeight * .85;
+    nav.classList.toggle('solid', pastHero);
+    nav.classList.toggle('hide', pastHero && y > lastY + 4 && !document.body.classList.contains('menu-open'));
+    if (y < lastY - 4) nav.classList.remove('hide');
+    lastY = y;
+
+    if (!reduce) {
+      const r = scrub.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (innerHeight * .82 - r.top) / (r.height + innerHeight * .35)));
+      const lit = Math.floor(p * words.length * 1.08);
+      words.forEach((w, i) => w.classList.toggle('on', i < lit));
+
+      if (par) {
+        const pr = par.parentElement.getBoundingClientRect();
+        if (pr.bottom > 0 && pr.top < innerHeight) {
+          const k = (pr.top + pr.height / 2 - innerHeight / 2) / innerHeight;
+          par.style.transform = `translate3d(0, ${k * -7}%, 0)`;
+        }
+      }
+    }
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive: true});
+  onScroll();
+
+  /* ---------- magnetic primary buttons ---------- */
+  if (!reduce && matchMedia('(pointer:fine)').matches) {
+    $$('.btn.primary, .btn.dark-btn').forEach(b => {
+      b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px, ${(e.clientY - r.top - r.height / 2) * .3}px)`; });
+      b.addEventListener('pointerleave', () => b.style.transform = '');
+    });
+  }
+
+  /* ---------- mobile menu ---------- */
+  const tog = $('#navToggle'), mm = $('#mobileMenu');
+  const setMenu = open => { mm.classList.toggle('open', open); document.body.classList.toggle('menu-open', open); tog.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; };
+  tog.addEventListener('click', () => setMenu(!mm.classList.contains('open')));
+  $$('a', mm).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* ---------- audience buttons preselect form ---------- */
+  $$('[data-topic]').forEach(b => b.addEventListener('click', () => { const r = $(`#enq input[value="${b.dataset.topic}"]`); if (r) r.checked = true; }));
+
+  /* ---------- enquiry form (preview: no backend yet) ---------- */
+  $('#enq').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, name = f.name.value.trim(), email = f.email.value.trim();
+    let ok = true;
+    [[f.name, name], [f.email, /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)]].forEach(([el, v]) => {
+      el.style.borderColor = v ? '' : 'var(--jg)'; if (!v) ok = false;
+    });
+    if (!ok) return;
+    $('#sent').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
